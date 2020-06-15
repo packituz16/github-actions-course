@@ -4,7 +4,17 @@ on:
   # schedule:
   #  - cron: "0/5 * * * *"
   #  - cron: "0/6 * * * *"
-#  push:
+  push:
+    branches:
+      - master
+      - 'feature/*' # does not match / so it will not match feature/myfeature/a
+      - 'feature/**' # this does match /
+      - '!feature/featC' # This will ignore this branch, must be after the other regexs
+#    branches-ignore:To ignore some branches, but it cannot be used in conjunction with branches
+    tags:
+      - v1.*
+    paths:
+      - '**.js'
   pull_request:
     types: [closed, assigned, opened, reopened]
 
