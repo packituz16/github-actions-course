@@ -5,6 +5,8 @@ on: [push]
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
+    # Default
+    timetout-minutes: 360
     steps:
       - name: echo a string
         run: echo "Hello World"
