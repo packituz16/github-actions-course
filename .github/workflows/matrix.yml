@@ -5,7 +5,7 @@ jobs:
   node-version:
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, window-latest]
+        os: [macos-latest, ubuntu-latest, windows-latest]
         node_version: [6,8,10]
       # Limit parallel executions
 #      max-parallel: 2
