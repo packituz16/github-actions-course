@@ -15,6 +15,8 @@ jobs:
           entrypoint: '/bin/echo'
           args: 'World'
       - uses: actions/checkout@v1
+      - name: Check
+        run: ls
       - name: Run a script
         uses: docker://node:12.14.1-alpine3.10
         with:
